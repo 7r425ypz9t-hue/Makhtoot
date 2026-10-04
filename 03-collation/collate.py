@@ -2,8 +2,8 @@
 """
 مقابلة نسخ رسالة «التبتل» آليًا بـ CollateX.
 
-المدخلات: transcriptions/<الرمز>/*.txt  (تُقرأ مرتّبة بالاسم وتُدمج نصًّا واحدًا لكل نسخة)
-المخرجات: collation/out/
+المدخلات: 02-transcription/<الرمز>/*.txt  (تُقرأ مرتّبة بالاسم وتُدمج نصًّا واحدًا لكل نسخة)
+المخرجات: 03-collation/out/
     - table.txt        جدول المحاذاة كاملًا
     - variants.csv     الفروق وحدها (موضع الخلاف وقراءة كل نسخة) — مسودة الحواشي
     - apparatus.xml    الفروق بصيغة TEI (app / rdg) جاهزة للدمج في tei/
@@ -18,8 +18,8 @@ from xml.sax.saxutils import escape
 from collatex import Collation, collate
 
 ROOT = Path(__file__).resolve().parent.parent
-TRANS = ROOT / "transcriptions"
-OUT = ROOT / "collation" / "out"
+TRANS = ROOT / "02-transcription"
+OUT = ROOT / "03-collation" / "out"
 
 TASHKEEL = re.compile("[\\u0610-\\u061A\\u064B-\\u065F\\u0670\\u06D6-\\u06ED\\u0640]")
 PAGE_MARK = re.compile(r"\[(?:ق|ص)?\s*[\d٠-٩]+\s*[أبظو]?\]")  # [ق12أ] علامات اللوحات
@@ -29,13 +29,14 @@ def normalize(word: str) -> str:
     w = TASHKEEL.sub("", word)
     w = re.sub("[إأآٱ]", "ا", w)
     w = w.replace("ى", "ي").replace("ة", "ه").replace("ؤ", "و").replace("ئ", "ي")
-    return re.sub(r"[^\w]", "", w)
+    w = re.sub(r"[^\w]", "", w)
+    return re.sub("ا$", "ي", w)  # الألف الممدودة والمقصورة في آخر الكلمة: غنا/غنى
 
 
 def load_witness(siglum: str) -> str:
     files = sorted((TRANS / siglum).glob("*.txt"))
     if not files:
-        sys.exit(f"لا توجد ملفات نسخ في transcriptions/{siglum}/")
+        sys.exit(f"لا توجد ملفات نسخ في 02-transcription/{siglum}/")
     text = "\n".join(f.read_text(encoding="utf-8") for f in files)
     text = PAGE_MARK.sub(" ", text)
     return re.sub(r"\s+", " ", text).strip()

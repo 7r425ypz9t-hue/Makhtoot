@@ -1,0 +1,17 @@
+{
+  "project": "MAKH-TABATTUL",
+  "work": {
+    "title_ar": "التبتل في العبادات وما لا غنى عنه من الدعوات لذوي الإرادات",
+    "short_title_ar": "التبتل في العبادات",
+    "author_ar": "أبو القاسم عبد الغفور بن عبد الله بن محمد النفزي",
+    "author_death": null,
+    "subject": ["أدعية", "أذكار", "تصوف عملي"]
+  },
+  "witnesses": [
+    {"siglum": "T", "siglum_ar": "ط", "holding": "مجموعة الكتاني (13046 ك) — جهة الحفظ تُتحقق", "date_ah": 1335, "scribe": "عثمان بن خليل (؟)", "place": "حرم الشيخ أبي سعيد الباجي (؟)", "folios_est": 118, "script": "مغربي", "images": {"count": 118, "format": "JPEG", "dpi": 150}},
+    {"siglum": "M", "siglum_ar": "م", "holding": "دار الكتب الوطنية، تونس", "shelfmark": "514", "date_ah": null, "folios": 135, "script": "مغربي", "images": {"count": 155, "format": "TIFF 1-bit", "dpi": 200, "photographer": "مركز جمعة الماجد للثقافة والتراث، دبي", "photographed": "1996-08"}}
+  ],
+  "editor": "د. ماجد عبدالله بوشليبي",
+  "status": "phase-1-complete",
+  "updated": "2026-10-04"
+}

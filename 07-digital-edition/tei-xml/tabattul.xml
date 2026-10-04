@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="ar">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">التبتل في العبادات وما لا غنى عنه من الدعوات لذوي الإرادات</title>
+        <title type="sub">تحقيق نقدي على نسختين خطيتين</title>
+        <author>أبو القاسم عبد الغفور بن عبد الله بن محمد النفزي<!-- الوفاة: مجهولة بعد --></author>
+        <editor role="محقق">د. ماجد عبدالله بوشليبي</editor>
+      </titleStmt>
+      <publicationStmt>
+        <p>مسودة عمل — مشروع «مخطوط»، غير منشورة.</p>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="T">
+            <abbr type="siglum">ط</abbr> نسخة الكتاني
+            <msDesc>
+              <msIdentifier>
+                <repository><!-- جهة الحفظ: مجموعة الكتاني، يُرجَّح المكتبة الوطنية بالرباط — يُتحقق --></repository>
+                <idno>13046 ك</idno>
+              </msIdentifier>
+              <physDesc>
+                <objectDesc>
+                  <supportDesc><extent><measure unit="leaf" quantity="118" cert="medium">نحو 118 ورقة</measure></extent></supportDesc>
+                </objectDesc>
+                <handDesc><p>مغربي</p></handDesc>
+              </physDesc>
+              <history>
+                <origin><persName role="scribe" cert="medium">عثمان بن خليل</persName>؛ <placeName cert="medium">حرم الشيخ أبي سعيد الباجي</placeName>؛ <origDate calendar="#hijri" when-custom="1335" cert="high">1335هـ</origDate></origin>
+                <provenance>ختم تملّك: محمد عبد الحي الكتاني، فاس.</provenance>
+              </history>
+              <additional><surrogates><p>118 صورة JPEG ملونة، 150 نقطة/بوصة.</p></surrogates></additional>
+            </msDesc>
+          </witness>
+          <witness xml:id="M">
+            <abbr type="siglum">م</abbr> نسخة تونس
+            <msDesc>
+              <msIdentifier>
+                <settlement>تونس</settlement>
+                <repository>دار الكتب الوطنية</repository>
+                <idno>514</idno>
+                <altIdentifier><idno>Mss. ar. 514</idno></altIdentifier>
+              </msIdentifier>
+              <physDesc>
+                <objectDesc>
+                  <supportDesc><extent><measure unit="leaf" quantity="135">135 ورقة</measure>، <dimensions unit="cm"><height>20</height><width>15</width></dimensions></extent><condition>تامة؛ أثر رطوبة</condition></supportDesc>
+                </objectDesc>
+                <handDesc><p>مغربي</p></handDesc>
+              </physDesc>
+              <history><origin><!-- حرد المتن باهت: يُقرأ في المرحلة 2 --></origin><provenance>ختم: Bibliothèque française — Tunis.</provenance></history>
+              <additional><surrogates><p>155 صورة TIFF ثنائية اللون، 200 نقطة/بوصة — تصوير مركز جمعة الماجد للثقافة والتراث، دبي، 1996/8.</p></surrogates></additional>
+            </msDesc>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <variantEncoding method="parallel-segmentation" location="internal"/>
+      <editorialDecl>
+        <p>منهج النص المختار؛ انظر docs/conventions.md.</p>
+      </editorialDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="chapter" n="1">
+        <head>الفاتحة</head>
+        <p>
+          <pb ed="#T" facs="img002.jpg"/><pb ed="#M" n="1" facs="Scan_0357.tif"/>
+          هذا كتاب التبتل في العبادات وما لا غنى عنه من الدعوات<app><lem wit="#T">لذوي الإرادات</lem><rdg wit="#M"/></app>
+          <note type="editorial">سقطت «لذوي الإرادات» من م، والمثبت من ط، ويؤيده حرد متن ط.</note>
+        </p>
+      </div>
+    </body>
+  </text>
+</TEI>

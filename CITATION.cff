@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "إن استعملت هذا العمل فاستشهد به على النحو الآتي."
+title: "التبتل في العبادات وما لا غنى عنه من الدعوات لذوي الإرادات — تحقيق نقدي (مسودة عمل)"
+type: dataset
+authors:
+  - family-names: "بوشليبي"
+    given-names: "ماجد عبدالله"
+    affiliation: "باحث مستقل، الشارقة"
+repository-code: "https://github.com/7r425ypz9t-hue/Makhtoot"
+version: "0.2.0"
+date-released: "2026-10-04"
+keywords:
+  - "تحقيق المخطوطات"
+  - "التبتل في العبادات"
+  - "النفزي"
+  - "الخط المغربي"
+  - "TEI"
