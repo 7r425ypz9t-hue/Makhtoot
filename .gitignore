@@ -1,0 +1,10 @@
+# صور المخطوط تبقى على الجهاز
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.png
+*.pdf
+collation/out/
+__pycache__/
+.venv*/
